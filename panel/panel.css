@@ -1,0 +1,70 @@
+.navs{
+	border-radius: 0;
+	padding-right: 30px;
+	margin-bottom: 0px;
+}
+.select{
+	height: 20px;
+	width: 20px;
+}
+.select div{
+	border-radius: 100%;
+	margin-top: 14px;
+	margin-left:5px;
+	margin-right: -10px;
+	height: 20px;
+	width: 20px;
+	background: green;
+	animation:beat 2s infinite;
+}
+@keyframes beat{
+	0%{
+		height: 20px;
+		width: 20px;
+		margin-top: 14px;
+		margin-left:5px;
+	}
+	50%{
+		height: 15px;
+		width: 15px;
+		margin-top: 16.5px;
+		margin-left:7.5px;
+	}
+	100%{
+		height: 20px;
+		width: 20px;
+		margin-top: 14px;
+		margin-left:5px;
+	}
+}
+.title{
+	margin-top: 0px;
+}
+.content{
+	margin-left: 150px;
+}
+.content > div{
+	background: grey;
+	margin-left: 20px;
+	border-radius: 4%;
+}
+.content button{
+	float:right;
+	margin-bottom: -10px;
+}
+.notes{
+	height: 250px;
+	width:230px;
+}
+.grids{
+	margin-bottom: 40px;
+}
+#myModal .contents_modal{
+	list-style-type: none;
+}
+#myModal .contents_modal li p{
+	font-size: 16px;
+	background: #99ccff;
+	padding: 10px;
+	border-radius: 10px;
+}

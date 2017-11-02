@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Register Page</title>
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="home/home.css">
+</head>
+<body>
+	<div class="container box">
+		<div class="jumbotron">
+			<form role="form">
+				<div class="form-group">
+					<label for="email">Enter Email</label>
+					<input type="text" name="email" id="email" class="form-control" ng-model="user.email">
+				</div>
+				<div class="form-group">
+					<label for="password">Enter Password</label>
+					<input type="password" name="password" id="password" class="form-control" ng-model="user.password">
+				</div>
+				<button type="submit" class="btn btn-primary logininb" ng-click="signUp($event)">SignUp</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

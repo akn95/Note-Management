@@ -1,0 +1,28 @@
+angular.module('myApp.edit_section',['ngRoute'])
+.config(['$routeProvider',function($routeProvider){
+	$routeProvider.when('/edit_section',{
+		templateUrl:'edit_section/edit_section.html',
+		controller:'editCtrl'
+	})
+}])
+.controller('editCtrl',['$scope','$location','userPersistence',function($scope,$location,userPersistence){
+
+	$scope.userName=userPersistence.getCookieData();
+	$scope.pass=userPersistence.getFlag();
+	if(!$scope.pass)
+	{
+		$location.path('/panel');
+	}
+	if(!$scope.userName)
+	{
+		$location.path('/home');
+	}
+	$scope.logoutUser=function()
+	{
+		userPersistence.offFlag();
+		userPersistence.logoutUser();
+	}
+	$scope.addNote=function(){
+		$location.path('/add_post');
+	}
+}])

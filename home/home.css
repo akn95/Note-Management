@@ -1,0 +1,14 @@
+body .box{
+	position: absolute;
+	width: 500px;
+	top:100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+p{
+	font-size: 10px;
+}
+a:hover{
+	text-decoration: none;
+}

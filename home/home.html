@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="home/home.css">
+</head>
+<body>
+	<div class="container box">
+		<div class="jumbotron">
+			<form role="form">
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" class="form-control" ng-model="user.email">
+				</div>
+				<p><a href="#/register">Create an account</a></p>
+				<button type="submit" class="btn btn-primary logininb" ng-click="signIn($event)">Log In</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

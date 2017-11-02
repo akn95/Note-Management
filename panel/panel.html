@@ -1,0 +1,91 @@
+<html ng-app="myApp">
+<head>
+	<title>Main Panel</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="panel/panel.css">
+</head>
+<body ng-controller="panelCtrl">
+	
+		<nav class="navbar navbar-inverse navs">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/panel">Home</a></li>
+				<li class="select"><div></div> </li>
+				<li><a href="#/panel">{{userName}}</a> </li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ng-click="prompt()"><span class="glyphicon glyphicon-edit"></span> Edit section</a></li>
+				<li><a ng-click="logoutUser()"><span class="glyphicon glyphicon-share"></span> Logout</a></li>
+			</ul>
+		</nav>
+		<div class="jumbotron text-center title">
+			<h1><span class="glyphicon glyphicon-pencil"></span> Notes</h1>
+		</div>
+	<div class="container mains">	
+		<div class="row content">
+			<div class="col-md-3 grids" ng-repeat="note in notes">
+				<div class="notes">
+					<h3>{{note.title}}</h3>
+					<h4>{{note.paradigm}}</h4>
+					<p style="white-space:pre-line;">{{note.half}}</p>
+				</div>
+				<button type="button" class="btn btn-info" ng-click="views(note.$id)">View</button>
+			</div>
+		</div>
+	</div>
+
+		<div id="myModal_1" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Enter password to Enter!!!</h4>
+				</div>
+				<div class="modal-body">
+					<input type="password" my-enter="enter($event)" ng-model="user.password" autofocus >
+				</div>
+				<div class="modal-footer ">
+					<button type="button" class="btn btn-success" ng-click="enter($event)" >Enter</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				</div>
+				</div>
+			</div>
+		</div>
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="modal-title">{{noteToView.title}}</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="contents_modal">
+						<li>
+							<h4><strong>Paradigm</strong></h4>
+							<p>{{noteToView.paradigm}}</p>
+						</li>
+						<li>
+							
+							<h4><strong>Time Complexity</strong></h4>
+							<p>{{noteToView.timec}}</p>
+						</li>
+						<li>
+							
+							<h4><strong>Space Complexity</strong></h4>
+							<p>{{noteToView.spacec}}</p>
+						</li>
+						<li>
+							<h4><strong>Description</strong></h4>
+							<p style="white-space:pre-line;">{{noteToView.textb}}</p>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

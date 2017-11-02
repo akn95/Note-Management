@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Main Panel</title>
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="edit_section/edit_section.css">
+</head>
+<body>
+	
+		<nav class="navbar navbar-inverse navs">
+			<ul class="nav navbar-nav">
+				<li><a href="#/panel">Home</a></li>
+				<li class="select"><div></div> </li>
+				<li><a href="#/panel">{{userName}}</a> </li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a><span class="glyphicon glyphicon-edit"></span> Edit section</a></li>
+				<li><a ng-click="logoutUser()"><span class="glyphicon glyphicon-share"></span> Logout</a></li>
+			</ul>
+		</nav>
+		<div class="jumbotron text-center">
+			<button class="btn btn-info btn-lg esection" ng-click="addNote()">Add Note</button>
+		</div>
+	<div class="container">	
+		<h1>Existing Notes</h1>
+	</div>
+</body>
+</html>
